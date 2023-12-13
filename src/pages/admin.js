@@ -1,5 +1,6 @@
+import DashboardLayout from "@/components/layouts/DashboardLayout";
 
-const Admin = () => {
+const AdminHomePage = () => {
     return (
         <div>
             <h1>Admin</h1>
@@ -7,4 +8,12 @@ const Admin = () => {
     );
 };
 
-export default Admin;
+export default AdminHomePage;
+
+AdminHomePage.getLayout = function getLayout(page) {
+    return (
+        <DashboardLayout>
+            {page}
+        </DashboardLayout>
+    )
+}
